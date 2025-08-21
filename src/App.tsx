@@ -29,7 +29,7 @@ function App() {
             gap: 2,
           }}
         >
-          <Button variant="contained" onClick={() => navigate("/dashboard")}>
+          <Button variant="contained" onClick={() => navigate("/")}>
             Browse Recipes
           </Button>
           <Button variant="contained" onClick={() => navigate("/favorites")}>
@@ -40,7 +40,7 @@ function App() {
         {/* Main Content */}
         <Box sx={{ mt: '80px', flex: 1, p: 2 }}>
            <AnimatePresence mode="wait">
-              <AppRouter />
+                <AppRouter />
            </AnimatePresence>
         </Box>
       </Box>

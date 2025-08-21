@@ -9,10 +9,14 @@ import ProtectedRoute from "../components/ProtectedRoute";
 export function AppRouter() {
   return (
     <Routes>
-  <Route path="/login" element={<Login />} />
-      <Route path="/favorites" element={<FavoriteRecipes />} />
+ <Route path="/login" element={<Login />} />
+    <Route path="/favorites" element={<FavoriteRecipes />} />
+
+
+      {/* <Route path="/register" element={<Register />} /> */}
+
       <Route
-          path="/dashboard"
+          path="/"
           element={
             <ProtectedRoute>
               <Dashboard />

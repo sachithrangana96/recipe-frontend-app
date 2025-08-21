@@ -81,7 +81,7 @@ export default function Login() {
     }
     const res = await login({ email: loginForm?.email, password: loginForm?.password });
     localStorage.setItem("token", res.token);
-    navigate("/dashboard");
+    navigate("/");
 
   };
 
@@ -103,7 +103,7 @@ export default function Login() {
 
     const res = await register({ name: registerForm?.username, email: registerForm?.email, password: registerForm?.password });
     localStorage.setItem("token", res.token);
-    navigate("/dashboard");
+    navigate("/");
 
   };
 
@@ -115,7 +115,7 @@ export default function Login() {
         alignItems: 'center',
         minHeight: '100vh',
         p: 2,
-        maxWidth: 550,
+        width: "100vw", 
       }}
     >
       <Paper
@@ -126,7 +126,8 @@ export default function Login() {
           width: '400px',
         }}
       >
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' , display: 'flex', justifyContent: 'center',alignItems: 'center',
+       }}>
           <Tabs value={value} onChange={handleChange} variant="fullWidth">
             <Tab
               label="Login"

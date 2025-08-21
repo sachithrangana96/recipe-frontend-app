@@ -10,11 +10,8 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const location = useLocation();
 
   if (!token) {
-    // Correctly redirects to the login page without a full page reload.
     return <Navigate to="/login" state={{ from: location }} />;
   }
-
-  // If a token exists, render the protected content.
   return children;
 };
 
