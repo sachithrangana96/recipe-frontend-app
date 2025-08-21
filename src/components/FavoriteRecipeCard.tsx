@@ -1,0 +1,46 @@
+
+import * as React from 'react';
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+} from '@mui/material';
+
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import DeleteIcon from '@mui/icons-material/Delete';
+import type { FavoriteRecipeCardProps, RecipeCardProps } from '../interface';
+
+
+
+
+const FavoriteRecipeCard: React.FC<FavoriteRecipeCardProps> = ({ recipe, isFavorite, onToggleFavorite, showDeleteIcon = false }) => {
+  return (
+    <Card sx={{ height: '100%' }}>
+      <CardMedia
+        component="img"
+        height="200"
+        image={recipe?.recipeThumb}
+        alt={recipe?.recipeName}
+      />
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Typography gutterBottom variant="h6" component="h2">
+          {recipe?.recipeName}
+        </Typography>
+          <IconButton
+         onClick={() => onToggleFavorite()}
+        aria-label="toggle favorite"
+      >
+        {showDeleteIcon && (
+          <DeleteIcon color="action" />
+        ) }
+      </IconButton>
+      </CardContent>
+    </Card>
+  );
+};
+
+export default FavoriteRecipeCard;
