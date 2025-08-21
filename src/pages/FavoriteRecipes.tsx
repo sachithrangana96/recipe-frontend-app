@@ -6,8 +6,7 @@ import {
   Paper,
   CircularProgress,
 } from '@mui/material';
-import RecipeCard from '../components/RecipeCard';
-import type { FavoriteRecipe, Recipe } from '../interface';
+import type { FavoriteRecipe } from '../interface';
 import { deleteFavorite, getFavorites } from '../api/favoriteApi';
 import FavoriteRecipeCard from '../components/FavoriteRecipeCard';
 import { motion } from 'framer-motion';
@@ -100,7 +99,6 @@ const FavoriteRecipes = () => {
                     >
                 <FavoriteRecipeCard
                   recipe={recipe}
-                  isFavorite={true}
                   onToggleFavorite={() => toggleFavorite(recipe)}
                   showDeleteIcon={true}
                 />

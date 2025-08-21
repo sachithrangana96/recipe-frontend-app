@@ -1,6 +1,5 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Login from "../pages/Login";
-import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard"
 import FavoriteRecipes from "../pages/FavoriteRecipes";
 import ProtectedRoute from "../components/ProtectedRoute";

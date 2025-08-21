@@ -1,7 +1,6 @@
 
 import * as React from 'react';
 import {
-  Box,
   Typography,
   Card,
   CardContent,
@@ -9,15 +8,13 @@ import {
   IconButton,
 } from '@mui/material';
 
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import DeleteIcon from '@mui/icons-material/Delete';
-import type { FavoriteRecipeCardProps, RecipeCardProps } from '../interface';
+import type { FavoriteRecipeCardProps } from '../interface';
 
 
 
 
-const FavoriteRecipeCard: React.FC<FavoriteRecipeCardProps> = ({ recipe, isFavorite, onToggleFavorite, showDeleteIcon = false }) => {
+const FavoriteRecipeCard: React.FC<FavoriteRecipeCardProps> = ({ recipe, onToggleFavorite, showDeleteIcon = false }) => {
   return (
     <Card sx={{ height: '100%' }}>
       <CardMedia

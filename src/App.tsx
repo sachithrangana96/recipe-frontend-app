@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import { AppRouter } from './routes/AppRouter'
 import { Box, Button, Paper } from '@mui/material'

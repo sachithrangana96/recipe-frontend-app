@@ -13,7 +13,6 @@ export interface RecipeCardProps {
 
 export interface FavoriteRecipeCardProps {
   recipe: FavoriteRecipe;
-  isFavorite: boolean;
   onToggleFavorite: () => void;
   showDeleteIcon?: boolean; // New prop to control the icon
 }

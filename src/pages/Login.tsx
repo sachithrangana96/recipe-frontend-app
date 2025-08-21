@@ -52,7 +52,7 @@ export default function Login() {
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: number):void => {
     setValue(newValue);
   };
 
