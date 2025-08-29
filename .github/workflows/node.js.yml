@@ -11,6 +11,8 @@ jobs:
   build:
 
     runs-on: self-hosted
+    env:
+      VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
     strategy:
       matrix:
